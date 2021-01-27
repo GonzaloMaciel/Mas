@@ -1,0 +1,39 @@
+<div class="form-group">
+  <label style="font-weight: bold" for="empId">Employee Id</label>
+  <input type="number" class="form-control" id="empId" [(ngModel)]="employeeId" placeholder="Enter an id">
+</div>
+
+<button class="button" class="btn btn-primary" (click)="onSubmit()">Search</button>
+
+<div>
+  <div style="margin-top: 15px;" class="table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>ContractTypeName</th>
+          <th>RoleId</th>
+          <th>RoleName</th>
+          <th>RoleDescription</th>
+          <th>HourlySalary</th>
+          <th>MonthlySalary</th>
+          <th>AnnualSalary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employees">
+          <td>{{emp.id}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.contractTypeName}}</td>
+          <td>{{emp.roleId}}</td>
+          <td>{{emp.roleName}}</td>
+          <td>{{emp.roleDescription}}</td>
+          <td>{{emp.hourlySalary}}</td>
+          <td>{{emp.monthlySalary}}</td>
+          <td>{{emp.annualSalary}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
